@@ -1,0 +1,11 @@
+h1 {
+  color: white; }
+
+.container-fluid {
+  background-color: green;
+  height: 100vh; }
+
+.btn-primary {
+  width: 20%;
+  padding: 20px 0;
+  border-color: none !important; }

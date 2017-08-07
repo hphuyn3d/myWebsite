@@ -1,0 +1,50 @@
+h1{
+    color: white;
+}
+#quoteGen{
+    background-image: url(/images/pages/quote.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+#generateBtn {
+    position: relative;
+    top: 450px;
+    left: 150px;
+}
+
+#quotes {
+    position: fixed;
+    top: 300px;
+    left: 40px;
+    max-width: 400px;
+    
+}
+
+@media only screen and (max-width: 400px){
+    
+    h1,
+    p{
+       color: black;
+    } 
+    h1{
+        font-size: 28px;
+        margin: 0 auto;
+    }
+    #quoteGen{
+        background-image: none;
+    }
+    
+    #generateBtn{
+        position: relative;
+        top:51px;
+        left: 68px;
+    }
+    .offset-5{
+        margin: 0 auto;
+    }
+   
+}

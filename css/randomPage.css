@@ -1,0 +1,18 @@
+.intro-content h1 {
+	color: #FFFFFF;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 6.4rem !important;
+
+}
+
+.rProject{
+  color: gray !important;
+}
+
+.rProject:hover {
+  color: blue !important;
+}
+.section-intro {
+	text-align: left !important;
+}
+
