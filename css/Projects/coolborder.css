@@ -14,13 +14,14 @@ body{
 a{
     position: relative;
     text-decoration: none;
-    width: 100px;
-    height: 50px;
+    width: 210px;
+    height: 70px;
     text-align: center;
     line-height: 50px;
     display: inline-block;
-    font-size: 24px;
+    font-size: 36px;
     color: black;
+    text-decoration-line: none;
 }
 
 a:before {
@@ -31,7 +32,7 @@ a:before {
     width: 0;
     height: 0;
     background: transparent;
-    border: 2px solid transparent;
+    border: 6px solid transparent;
 }
 
 a:hover:before {
@@ -60,18 +61,19 @@ a:hover:before {
         border-top-color: #262626;
         border-right-color: #262626;
         border-bottom-color: transparent;
-        border-left-color: #262626;
+        border-left-color: transparent;
     }
 }
 a:after {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: 0px;
+    left: 0px;
     width: 0;
     height: 0;
     background: transparent;
-    border: 2px solid transparent;
+    border: 6px solid transparent;
+    box-shadow: 10;
 }
 
 a:hover:after {
