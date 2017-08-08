@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <div class="info text-center">
+        <h1>Press they keys and jam away</h1>
+        <h4>Pick a beat and mix it with all of the sounds</h4>
+    </div>
     <div class="keys">
         <div data-key="65" class="key">
             <kbd>A</kbd>
@@ -47,6 +51,14 @@
             <kbd>L</kbd>
             <span class="sound">tink</span>
         </div>
+        <div data-key="81" class="key">
+            <kbd>Q</kbd>
+            <span class="sound">Beat 1</span>
+        </div>
+        <div data-key="87" class="key">
+            <kbd>W</kbd>
+            <span class="sound">Beat 2</span>
+        </div>
     </div>
 
     <audio data-key="65" src="/audio/clap.wav"></audio>
@@ -58,6 +70,8 @@
     <audio data-key="74" src="/audio/snare.wav"></audio>
     <audio data-key="75" src="/audio/tom.wav"></audio>
     <audio data-key="76" src="/audio/tink.wav"></audio>
+    <audio data-key="81" src="/audio/beat1.wav"></audio>
+    <audio data-key="87" src="/audio/beat2.wav"></audio>
 
     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
