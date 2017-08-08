@@ -3,64 +3,31 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Drummer</title>
-    
+    <title>Go DJ</title>
+    <meta name="description" content="Music DJ App">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Hung Huynh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/Projects/drums.css" />
-</head>
+    <link rel="stylesheet" href="/css/Projects/drums.css" /> </head>
 
 <body>
     <div class="info text-center">
         <h1>Press they keys and jam away</h1>
-        <h4>Pick a beat and mix it with all of the sounds</h4>
-    </div>
+        <h4>Pick a beat and mix it with all of the sounds</h4> </div>
     <div class="keys">
-        <div data-key="65" class="key">
-            <kbd>A</kbd>
-            <span class="sound">clap</span>
-        </div>
-        <div data-key="83" class="key">
-            <kbd>S</kbd>
-            <span class="sound">hihat</span>
-        </div>
-        <div data-key="68" class="key">
-            <kbd>D</kbd>
-            <span class="sound">kick</span>
-        </div>
-        <div data-key="70" class="key">
-            <kbd>F</kbd>
-            <span class="sound">openhat</span>
-        </div>
-        <div data-key="71" class="key">
-            <kbd>G</kbd>
-            <span class="sound">boom</span>
-        </div>
-        <div data-key="72" class="key">
-            <kbd>H</kbd>
-            <span class="sound">ride</span>
-        </div>
-        <div data-key="74" class="key">
-            <kbd>J</kbd>
-            <span class="sound">snare</span>
-        </div>
-        <div data-key="75" class="key">
-            <kbd>K</kbd>
-            <span class="sound">tom</span>
-        </div>
-        <div data-key="76" class="key">
-            <kbd>L</kbd>
-            <span class="sound">tink</span>
-        </div>
-        <div data-key="81" class="key">
-            <kbd>Q</kbd>
-            <span class="sound">Beat 1</span>
-        </div>
-        <div data-key="87" class="key">
-            <kbd>W</kbd>
-            <span class="sound">Beat 2</span>
-        </div>
+        <div data-key="65" class="key"> <kbd>A</kbd> <span class="sound">clap</span> </div>
+        <div data-key="83" class="key"> <kbd>S</kbd> <span class="sound">hihat</span> </div>
+        <div data-key="68" class="key"> <kbd>D</kbd> <span class="sound">kick</span> </div>
+        <div data-key="70" class="key"> <kbd>F</kbd> <span class="sound">openhat</span> </div>
+        <div data-key="71" class="key"> <kbd>G</kbd> <span class="sound">boom</span> </div>
+        <div data-key="72" class="key"> <kbd>H</kbd> <span class="sound">ride</span> </div>
+        <div data-key="74" class="key"> <kbd>J</kbd> <span class="sound">snare</span> </div>
+        <div data-key="75" class="key"> <kbd>K</kbd> <span class="sound">tom</span> </div>
+        <div data-key="76" class="key"> <kbd>L</kbd> <span class="sound">tink</span> </div>
+        <div data-key="81" class="key"> <kbd>Q</kbd> <span class="sound">Beat 1</span> </div>
+        <div data-key="87" class="key"> <kbd>W</kbd> <span class="sound">Beat 2</span> </div>
     </div>
-
     <audio data-key="65" src="/audio/clap.wav"></audio>
     <audio data-key="83" src="/audio/hihat.wav"></audio>
     <audio data-key="68" src="/audio/kick.wav"></audio>
@@ -72,10 +39,8 @@
     <audio data-key="76" src="/audio/tink.wav"></audio>
     <audio data-key="81" src="/audio/beat1.wav"></audio>
     <audio data-key="87" src="/audio/beat2.wav"></audio>
-
     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <script>
         function removeTransition(e) {
             if (e.propertyName !== 'transform') return;
@@ -86,12 +51,10 @@
             const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
             const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
             if (!audio) return;
-
             key.classList.add('playing');
             audio.currentTime = 0;
             audio.play();
         }
-
         const keys = Array.from(document.querySelectorAll('.key'));
         keys.forEach(key => key.addEventListener('transitionend', removeTransition));
         window.addEventListener('keydown', playSound);
