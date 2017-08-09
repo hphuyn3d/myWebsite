@@ -1,11 +1,23 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 1600px;
+    /*    max-width: 1600px;*/
+}
+
+
+
+p {
+    font-size: 16px;
 }
 
 h1 {
     font-size: 5em;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 nav {
@@ -18,7 +30,17 @@ ul.nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    flex: 1;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.paraFont {
+    font-size: 20px;
+}
+
 
 /* NAV ENDS */
 
@@ -29,11 +51,14 @@ ul.nav {
 }
 
 .parallax {
-    background-image: url(/images/conquer.jpeg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.jumbo {
+    background-image: url(/images/conquer.jpeg);
     height: 100vh;
 }
 
@@ -49,55 +74,174 @@ ul.nav {
     font-weight: bold;
 }
 
-
-.spacer{
+.spacer {
     margin: 50px 0;
 }
-.three-col{
+
+.three-col {
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-.box{
+.box {
     border: 1px solid black;
-    width: 240px;
-    padding: 20px;
-    background-color: lightgray;
+    width: 270px;
+    background-color: #f2f2f2;
     margin: 0 50px;
 }
 
-.button{
-    padding: 10px 30px;
-    color: white;
+.box-four {
+    border: 1px solid black;
+    width: 300px;
+    background-color: #f2f2f2;
+    margin: 0 20px;
 }
 
-#green-btn{
+.inside-box {
+    padding: 20px;
+}
+
+.inside-box-big {
+    padding: 40px;
+    background-color: #f2f2f2;
+}
+
+.img-responsive {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.button {
+    padding: 10px 30px;
+    color: white;
+    border-radius: 9%;
+    margin: 20px 0;
+}
+
+#green-btn {
     background-color: green;
 }
 
-#blue-btn{
+#blue-btn {
     background-color: blue;
 }
 
-#red-btn{
+#red-btn {
     background-color: red;
 }
 
+#white-btn {
+    background-color: white;
+}
+
+
 /* SECTION - B ENDS */
 
-#section-c{
+#section-c {
     margin: 50px 0;
 }
 
-.two-col{
+.two-col {
     display: flex;
     justify-content: center;
 }
 
-.box-2{
+.one-col {
+    display: flex;
+    justify-content: center;
+}
+
+.box-1 {
     border: 1px solid black;
-    padding: 10px 10px;
+    margin: 0 20px;
+}
+
+.box-2 {
+    border: 1px solid black;
     margin: 0 50px;
+    background-color: #f2f2f2;
+}
+
+.box-2 h3 {
+    margin-bottom: 30px;
+}
+
+.box-2 button {
+    position: relative;
+    left: 70%;
+}
+
+
+/* SECTION - C ENDS */
+
+.ourservices {
+    background-image: url(https://source.unsplash.com/3l3RwQdHRHg/1300x700);
+    height: 40vh;
+}
+
+.heading-small {
+    color: white;
+    position: relative;
+    top: 30%;
+}
+
+.heading-small-contact {
+    color: white;
+    position: relative;
+    top: 8%;
+}
+
+
+
+/* OUR SERVICES END */
+
+.four-col {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/* FOUR COL SECTION END */
+
+.opBox {
+    background-color: rgba(0, 0, 0, .7);
+/*    margin: 0 189px;*/
+    padding: 28px;
+}
+
+.contact {
+       background-image: url(https://source.unsplash.com/GDrkxJNtG5k/1300x700);
+    height: 70vh;
+}
+
+.contct-form{
+    display: flex;
+}
+
+
+#name, #mail, #subject {
+    margin: 24px 0;
+    width: 40%;
+    padding: 10px 0;
+}
+
+
+.right{
+    float: right;
+    clear: right;
+    margin-top: -251px;
+    
+}
+
+.spacer-bottom{
+    margin: 50px 0 0 0;
+}
+
+.container-fluid{
+     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
