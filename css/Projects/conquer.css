@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    max-width: 1600px;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+nav {
+    background-color: #213a63;
+    padding: 20px 0;
+}
+
+ul.nav {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* NAV ENDS */
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.parallax {
+    background-image: url(/images/conquer.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 37%;
+}
+
+.heading h1 {
+    font-weight: bold;
+}
+
+
+.spacer{
+    margin: 50px 0;
+}
+.three-col{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.box{
+    border: 1px solid black;
+    width: 240px;
+    padding: 20px;
+    background-color: lightgray;
+    margin: 0 50px;
+}
+
+.button{
+    padding: 10px 30px;
+    color: white;
+}
+
+#green-btn{
+    background-color: green;
+}
+
+#blue-btn{
+    background-color: blue;
+}
+
+#red-btn{
+    background-color: red;
+}
+
+/* SECTION - B ENDS */
+
+#section-c{
+    margin: 50px 0;
+}
+
+.two-col{
+    display: flex;
+    justify-content: center;
+}
+
+.box-2{
+    border: 1px solid black;
+    padding: 10px 10px;
+    margin: 0 50px;
+}
