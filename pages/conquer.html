@@ -7,14 +7,20 @@
     <meta name="description" content="Music DJ App">
     <meta name="keywords" content="HTML,CSS,JavaScript">
     <meta name="author" content="Hung Huynh">
-     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="/css/Projects/conquer.css" /> </head>
 
 <body>
-    
+
     <header>
         <nav>
-            <ul class="nav">
+            <button class="toggle">
+                <div class="icon-bar"></div>
+                <div class="icon-bar"></div>
+                <div class="icon-bar"> </div>
+                <div style="clear: both"></div>
+                </button>
+            <ul class="nav show hide">
                 <li>Homepage</li>
                 <li>About Us</li>
                 <li>Services</li>
@@ -144,7 +150,7 @@
                             <input type="text" id="name" name="user_name" placeholder="Name"> </div>
                         <div>
                             <input type="email" id="mail" name="user_mail" placeholder="Email"> </div>
-                            <div>
+                        <div>
                             <input type="subject" id="subject" name="user_subject" placeholder="Subject"> </div>
                         <div class="right">
                             <textarea id="msg" name="user_message" placeholder="Message" rows="11.5" cols="50"></textarea>
@@ -155,6 +161,12 @@
         </div>
     </section>
     <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script></script>
+    <script>
+        $(".toggle").click(function(){
+            $("ul").toggleClass("hide");
+        });
+    </script>
 </body>
 
 </html>
