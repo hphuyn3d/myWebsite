@@ -11,9 +11,14 @@
 </head>
 
 <body>
+    <div class="top">
+       <h1 class="text-center">Street Fighter Hadoken</h1>
+        </div>
     <div class="container">
+     
+        <img src="/images/pages/ryu.jpg" alt="Ryu" id="hadoken">
     <div class="box">
-            <h1>Hello</h1>
+           <img src="/images/pages/hadokenBall.jpg" alt="Hadoken" id="ryu">
         </div>
     </div>
 
@@ -21,18 +26,27 @@
         .container {
             display: flex;
             justify-content: flex-start;
-            border: 1px solid black;
+            padding: 15% 0;
         }
         .box{
             box-sizing: border-box;
-            padding: 100px;
-            border: 1px solid black;
+            padding-top: 38px;
+            
+        }
+        
+        .top {
+            background-image: url(/images/pages/streetfightervenue.jpg);
         }
         .container:hover .box{
             transition: 3s;
-            transform: translate(355px,200px);
+            transform: translate(455px,0);
             overflow: hidden;
         }
+        
+        .text-center{
+            text-align: center;
+        }
+        
     </style>
 </body>
 
