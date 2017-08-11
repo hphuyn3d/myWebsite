@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Blur Menu</title>
+    <meta name="description" content="Blur Menu">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Hung Huynh">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="about">
+                <h1 class="text-center">About</h1>
+            </div>
+            <div class="work">
+                <h1 class="text-center">Work</h1>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="blog">
+                <h1 class="text-center">Blog</h1>
+            </div>
+            <div class="contact">
+                <h1 class="text-center">Contact</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1{
+            color: white;
+        }
+        
+        .work,
+        .about,
+        .blog,
+        .contact {
+             border: 1px solid black;
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .work:hover,
+        .about:hover,
+        .blog:hover,
+        .contact:hover{
+            font-size: 1.5em;
+        }
+        
+        .work{
+            background-color: #F06060;
+        }
+        
+        .about{
+            background-color: #FA987D;
+        }
+        
+        .blog{
+            background-color: #72CCA7;
+        }
+        
+        .contact{
+            background-color: #10A296;
+        }
+        
+        .top{
+            display: flex;
+           justify-content: center;
+        }
+        
+        .bottom{
+            display: flex;
+            
+        }
+    </style>
+
+</body>
+
+</html>
