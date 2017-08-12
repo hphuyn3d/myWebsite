@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS animation walking man</title>
+  <meta name="description" content="Scroll Effect">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Hung Huynh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <div class="circle">
+    <img src="/images/pages/globe.png">
+    <div class="man">
+      <img src="/images/pages/walking.gif" alt="Walking man">
+    </div>
+  </div>
+  <div class="moon">
+    <img src="/images/pages/moon.png" alt="Moon">
+  </div>
+  <div class="sun">
+    <img src="/images/pages/Happy-Sun.png" alt="Sun">
+  </div>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      animation: dayandnight 15s linear infinite;
+    }
+    
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 720px;
+      height: 720px;
+      animation: animate 25s linear infinite;
+    }
+    
+    .man {
+      width: 50%;
+      height: 2px;
+      background: transparent;
+      position: absolute;
+      top: calc(50% - 1px);
+      transform-origin: right;
+      animation: animateMan 10s linear infinite;
+    }
+    
+    .man img {
+      transform: rotate(60deg) translateY(15px);
+    }
+    
+    .moon {
+      position: absolute;
+      bottom: 54%;
+      transform: scale(.5) translate(-50%, -50%);
+      animation: animateMoon 15s infinite;
+    }
+    
+    .sun {
+      position: absolute;
+      top: 15%;
+      left: 8%;
+      transform: translate(-50%, -50%);
+      animation: animateSun 15s infinite;
+    }
+    
+    .sun img {
+      transform: scale(.5);
+    }
+    
+    @keyframes animate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(.5);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(-360deg) scale(.5);
+      }
+    }
+    
+    @keyframes animateMan {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes dayandnight {
+      0% {
+        background-color: white;
+      }
+      10% {
+        background-color: white;
+      }
+      50% {
+        background-color: black;
+      }
+      90% {
+        background-color: white;
+      }
+      100% {
+        background-color: white;
+      }
+    }
+    
+    @keyframes animateMoon {
+      0% {
+        opacity: 0;
+      }
+      40% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      80% {
+        transform: translate(1000px, 0) scale(.5);
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    
+    @keyframes animateSun {
+      0% {
+        opacity: 1;
+      }
+      40% {
+        opacity: .5;
+      }
+      45% {
+        opacity: .01;
+      }
+      50% {
+        opacity: 0;
+      }
+      80% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</body>
+
+</html>
