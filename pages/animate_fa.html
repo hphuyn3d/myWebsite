@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Animate Font Awesome Icons</title>
+  <meta name="description" content="Weight Converter">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Hung Huynh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <h1>Animating Font Awesome Icons</h1>
+  <div class="icons">
+    <div class="inner">
+      <div id="chain" class="fa"></div>
+      <br><br>
+      <div id="battery" class="fa"></div>
+      <br><br>
+      <div id="hrglass" class="fa"></div>
+      <div id="volume" class="fa"></div>
+    </div>
+  </div>
+
+
+  <style>
+    body {
+      background-color: #1D9F75;
+    }
+    
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+      background-color: #fff;
+    }
+    
+    .inner{
+      background-color: #f7f7f7;
+      width: 800px;
+      display: flex;
+      padding: 100px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    #chain,
+    #battery,
+    #hrglass,
+    #volume {
+      font-size: 50px;
+      padding: 0 50px;
+    }
+  </style>
+
+  <script>
+    // Break chain animation
+    function breakChain() {
+      let chain = document.getElementById('chain');
+      chain.innerHTML = "&#xf0c1;";
+      setTimeout(function() {
+        chain.innerHTML = "&#xf127;";
+      }, 1000);
+    }
+    // Call Animation
+    breakChain();
+    // Animates every two seconds
+    setInterval(breakChain, 2000);
+
+    // Battery Animation
+    function chargeBattery() {
+      let battery = document.getElementById('battery');
+      battery.innerHTML = "&#xf244;";
+      setTimeout(function() {
+        battery.innerHTML = "&#xf243;";
+      }, 1000);
+      setTimeout(function() {
+        battery.innerHTML = "&#xf242;";
+      }, 2000);
+      setTimeout(function() {
+        battery.innerHTML = "&#xf241;";
+      }, 3000);
+      setTimeout(function() {
+        battery.innerHTML = "&#xf240;";
+      }, 4000);
+    }
+    // Call animation
+    chargeBattery();
+
+    // Animates every 5 seconds
+    setInterval(chargeBattery, 5000);
+
+    // HourGlass Animation
+    function fillHour() {
+      let hourglass = document.getElementById('hrglass');
+      hourglass.innerHTML = "&#xf251;";
+      setTimeout(function() {
+        hourglass.innerHTML = "&#xf252;";
+      }, 1000);
+      setTimeout(function() {
+        hourglass.innerHTML = "&#xf253;";
+      }, 2000);
+    }
+    // Call animation
+    fillHour();
+
+    // Animates every 5 seconds
+    setInterval(fillHour, 3000);
+
+    // Volume Animation
+    function volumeUp() {
+      let volume = document.getElementById('volume');
+      volume.innerHTML = "&#xf026;";
+      setTimeout(function() {
+        volume.innerHTML = "&#xf027;";
+      }, 1000);
+      setTimeout(function() {
+        volume.innerHTML = "&#xf028;";
+      }, 2000);
+    }
+    // Call animation
+    volumeUp();
+
+    // Animates every 5 seconds
+    setInterval(volumeUp, 3000);
+  </script>
+</body>
+
+</html>
