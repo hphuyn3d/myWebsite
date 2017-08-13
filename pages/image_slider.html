@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Slideshow images</title>
+  <meta name="description" content="Slideshow">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Hung Huynh">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="control">
+    <div class="next" onclick="next()">
+      <h1 id="right">&and;</h1>
+    </div>
+    <div class="prev" onclick="previous()">
+      <h1 id="left">&and;</h1>
+    </div>
+  </div>
+  <img alt="Slideshows" name="slide" class="img" style="background-size: cover;">
+
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    
+    img {
+      height: 100vh;
+      width: 100vw;
+    }
+    
+    .next,
+    .prev {
+      cursor: pointer;
+      position: absolute;
+      font-size: 36px;
+      border: 1px solid transparent;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, .3);
+    }
+    
+    .next:hover,
+    .prev:hover {
+      background-color: rgba(255, 255, 255, .3);
+    }
+    
+    .next {
+      left: 90%;
+      top: 40%;
+    }
+    
+    #right {
+      animation: animateRight 3s;
+      animation-fill-mode: forwards;
+    }
+    
+    .prev {
+      top: 40%;
+      left: 4%;
+    }
+    
+    #left {
+      animation: animateLeft 3s;
+      animation-fill-mode: forwards;
+    }
+    
+    @keyframes animateRight {
+      0% {
+         color: rgba(255,255,255,.3);
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+    
+    @keyframes animateLeft {
+      0% {
+        color: rgba(255,255,255,.3);
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(-90deg);
+      }
+    }
+    
+    @media screen and (max-width: 480px){
+      .next,
+      .prev {
+        display: none;
+      }
+    }
+  </style>
+  <script>
+    var i = 0; // Start Point
+    var images = []; // Images Array
+    var time = 5000; // Time Between Switch
+
+    // Image List
+    images[0] = "https://source.unsplash.com/UUcQywVQhMI";
+    images[1] = "https://source.unsplash.com/EjlygRQAOik";
+    images[2] = "https://source.unsplash.com/TULqBUELe9c";
+    images[3] = "https://source.unsplash.com/zc4MEZMdXhc";
+
+    function next() {
+      document.slide.src = images[i];
+      if (i < images.length - 1) i++;
+      else i = 0;
+    }
+
+    function previous() {
+      document.slide.src = images[i];
+      if (i > 0) i--;
+      else i = 3;
+    }
+
+    // Change Image
+    function changeImg() {
+      document.slide.src = images[i];
+
+      // Check If Index Is Under Max
+      if (i < images.length - 1) {
+        // Add 1 to Index
+        i++;
+      } else {
+        // Reset Back To O
+        i = 0;
+      }
+
+      // Run function every x seconds
+      setTimeout("changeImg()", time);
+    }
+
+    // Run function when page loads
+    window.onload = changeImg;
+  </script>
+</body>
+
+</html>
